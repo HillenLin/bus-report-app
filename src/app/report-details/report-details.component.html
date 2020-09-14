@@ -1,0 +1,21 @@
+<div class="report-container">
+    <div *ngIf="reportDataArray && reportDataArray.length">
+        <ng-container *ngFor="let data of reportDataArray">
+            <mat-expansion-panel class="accordion">
+                <mat-expansion-panel-header>
+                <mat-panel-title class="panel-title">
+                {{ data.organisation }} - {{ data.date }}
+                </mat-panel-title>
+                </mat-expansion-panel-header>
+                <app-bus-report-table [busDataArray]="data.busData"></app-bus-report-table>
+                <div>
+                    <textarea class="notes" placeholder="Enter notes here">{{ data.notes }}</textarea>
+                    <button mat-button class="btn" (click)="saveNotes(data);">Save Notes</button>
+                </div>
+            </mat-expansion-panel>
+        </ng-container>
+    </div>
+    <div *ngIf="reportDataArray && reportDataArray.length === 0">
+         <mat-card class="accordion">No data available.</mat-card>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+# BusReportApp
+
+This project was generated with Angular CLI version 8.3.29, Angular version 8.2.14.
+
+This project used Angular Meterial verison 8.2.3.
+
+Run `npm install' to install all the dependency packages.
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
+#Assumptions
+Assume that if deviationFromTimetable value greater than 300 would consider as `Early`.
+
+Assume that if deviationFromTimetable value less than -200 would consider as `Late`.
+
+Otherwise it would consider as `On Time'.
